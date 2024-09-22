@@ -1,0 +1,141 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap');
+
+/* Root variables */
+:root {
+    --primary-bg: #f5f5f5;
+    --secondary-bg: #ffffff;
+    --text-color: #333;
+    --accent-color: #3d8b6b;
+    --font-family: 'Crimson Pro', Times, serif;
+    --font-size: 16px;
+}
+
+/* Reset default margin and padding */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: var(--primary-bg);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    background-image: url('../img/bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    min-height: 100vh;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+/* Additional text size classes */
+.text-size-700 {
+    font-weight: 700;
+}
+
+/* Container styles */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Text styles */
+.text-center {
+    text-align: center;
+}
+
+/* Button styles */
+.btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #282c37;
+}
+
+/* Thank you message styles */
+.thank-you {
+    display: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Create a two-column layout using CSS Grid */
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Social icons */
+.social-icons {
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        min-height: 100vh;
+    }
+}
